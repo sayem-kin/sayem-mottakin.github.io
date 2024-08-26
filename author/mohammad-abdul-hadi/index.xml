@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mohammad Abdul Hadi</title>
+    <link>/author/mohammad-abdul-hadi/</link>
+      <atom:link href="/author/mohammad-abdul-hadi/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mohammad Abdul Hadi</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Mohammad-Abdul-Hadi, 2021</copyright><lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_512x512_fill_lanczos_center_2.png</url>
+      <title>Mohammad Abdul Hadi</title>
+      <link>/author/mohammad-abdul-hadi/</link>
+    </image>
+    
+    <item>
+      <title>Evaluating Pre-Trained Models for User Feedback Analysis in Software Engineering</title>
+      <link>/publication/emp-study-on-ptms/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/emp-study-on-ptms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PTM Empirical Study</title>
+      <link>/slides/emp-study-ptm/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>/slides/emp-study-ptm/</guid>
+      <description>&lt;h1 id=&#34;evaluating-ptms-for-user-feedback-analysis-in-se&#34;&gt;Evaluating PTMS for User Feedback Analysis in SE&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/2104.05861&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pre-print&lt;/a&gt; | 
+&lt;a href=&#34;https://docs.google.com/presentation/d/1NgKxgn2PZ_QKxZwLCXYtPzIe-oNXFevj/edit?usp=sharing&amp;amp;ouid=115117445400598553695&amp;amp;rtpof=true&amp;amp;sd=true&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Analyzing app reviews have proved to be useful for many areas of software engineering.&lt;/li&gt;
+&lt;li&gt;Automatic classification of app reviews requires extensive efforts to manually curate a labeled dataset.&lt;/li&gt;
+&lt;li&gt;Recent pre-trained neural language models (PTM) are trained on large corpora in an unsupervised manner and have found success in solving similar Natural Language Processing problems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We investigate the benefits of PTMs for app review classification compared to the existing models,&lt;/li&gt;
+&lt;li&gt;We also examine the transferability of PTMs in multiple settings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-method&#34;&gt;Proposed Method&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We empirically study the accuracy and time efficiency of PTMs compared to prior approaches using six datasets from literature. We also investigate the performance of the PTMs trained on app reviews.&lt;/li&gt;
+&lt;li&gt;We set up studies to evaluate PTMs in multiple settings: binary vs. multi-class classification, zero-shot classification, multi-task setting, and classification of reviews from different resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;contributions&#34;&gt;Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the first study that explores the difference between four PTMs and four existing tools/approaches on six different app review datasets with different sizes and labels.&lt;/li&gt;
+&lt;li&gt;We are the first to explore the performance of general versus domain-specific pre-trained PTMs for app review classification.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;This is the first empirical study to examine the accuracy and efficiency of PTMs in four different settings: binary vs. multi-class classification, zero shot setting, multi-task setting, and setting in which training data is from one resource (e.g., App Store) and the model is tested on data from another platform (e.g., Twitter).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;RQ1:&lt;/em&gt; How accurate and efficient are the PTMs in the classification of app reviews compared to the existing tools?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;RQ2:&lt;/em&gt; How does the performance of the PTMs change when they are pre-trained on app-review dataset, instead of a generic dataset (e.g., Wiki-documents, book corpus)?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;RQ3:&lt;/em&gt; How do the PTMs perform in the following settings?
+(a) Binary vs multi-class setting,
+(b) Zero-shot classification,
+(c) Multi-task setting (i.e., different app-review analysis tasks),
+(d) Classification of user-reviews collected from different resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;datasets&#34;&gt;Datasets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 1 (D1):&lt;/em&gt; This dataset is procured by Gu and Kim (contains 34,000 reviews from 17 popular Android apps; labeled with 5 classes)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 2 (D2):&lt;/em&gt; This dataset is procured by Stanik et al. (contains 6,406 app reviews from Google Play and 10,364 tweets which are labeled manually into three classes: Problem Report, Inquiry, and Irrelevant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 3 (D3):&lt;/em&gt; This dataset is provided by Lu and Liang (contains 2,000 review sentences from 2 apps, one app from Google Play and another from Apple App Store; the reviews are classified into six categories)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 4 (D4):&lt;/em&gt; This dataset was procured by Maalej and Nabil (contains 2,000 manually labeled reviews from random apps selected from top apps in different categories; the reviews are classified into four categories)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Dataset 5 (D5):&lt;/em&gt; This dataset is published by Guo et al. (contains 1,500 app reviews from randomly selected 151 apps from Apple App Store; the reviews are classified into three categories)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Dataset 6 (D6):&lt;/em&gt; This dataset was procured by Guzman et al.; (contains 1820 reviews of 3 apps from Apple App Store and 4 apps from Google Play; this dataset includes seven categories)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/MGPKt5Nb9HM&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AOBTM - Adaptive Online Biterm Topic Modeling for Version Sensitive Short-texts Analysis</title>
+      <link>/publication/aobtm/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/aobtm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AOBTM</title>
+      <link>/slides/aobtm/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/aobtm/</guid>
+      <description>&lt;h1 id=&#34;aobtm---adaptive-online-biterm-topic-model&#34;&gt;AOBTM - Adaptive Online Biterm Topic Model&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/AOBTM-Adaptive-Online-Biterm-Topic-Modeling&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.09930.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;App reviews have dynamic nature&lt;/li&gt;
+&lt;li&gt;Discussed topics in the app-reviews change over time for different versions of app.&lt;/li&gt;
+&lt;li&gt;The changes in the topics should be analyzed to reveal important issues in the app update&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conventional-inadequate-approaches&#34;&gt;Conventional (Inadequate) Approaches&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Conventional topic models, such as LDA, PLSA, BTM&lt;/li&gt;
+&lt;li&gt;Online Topic Modeling algorithms, such as OLDA, OBTM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-approach--contributions&#34;&gt;Proposed Approach &amp;amp; Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Adaptive Online Biterm Topic Model (AOBTM)&lt;/li&gt;
+&lt;li&gt;Parallel algorithms to automatically determine the optimal number of topics&lt;/li&gt;
+&lt;li&gt;Parallel algorithms to automatically determine the best number of previous version to consider&lt;/li&gt;
+&lt;li&gt;Open sourced Code: github.com/Mohammad-Abdul-Hadi/AOBTM-Adaptive-Online-Biterm-Topic-Modeling&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;research-questions&#34;&gt;Research Questions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Can AOBTM achieve better performance compared to baselines?&lt;/li&gt;
+&lt;li&gt;How different parameter settings impact the performance of AOBTM?&lt;/li&gt;
+&lt;li&gt;How discriminative and coherent are the topics discovered when parameters are set by proposed parallel algorithms?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AOBTM delivers the highest PMI_Scores in every dataset&lt;/li&gt;
+&lt;li&gt;AOBTM delivers the highest Dis_Scores in every dataset except for Tweets2020&lt;/li&gt;
+&lt;li&gt;AOBTM also delivers the highest scores in every dataset for Precision, Recall, and F_hybrid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;We acknowledge that AOBTM is time-expensive; but the run-time is still comparable to adaptive online algorithms when the dataset is small.&lt;/li&gt;
+&lt;li&gt;AOBTM outperforms AOLDA in runtime for NOAA Radar dataset, which has the lowest number of average short texts per version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed a novel Adaptive topic modeling algorithm, AOBTM&lt;/li&gt;
+&lt;li&gt;AOBTM discovers coherent and discriminative topics from short texts&lt;/li&gt;
+&lt;li&gt;AOBTM addresses the problems with conventional topic models by adopting a version sensitive strategy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Proposed two parallel algorithms to determine the value of the two most important parameters of our model automatically&lt;/li&gt;
+&lt;li&gt;The results of several experiments on different datasets conform the performance of AOBTM compared to the state-of-the-art algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/0xxmmfIRsHY&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Review-Viz</title>
+      <link>/slides/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/review-viz/</guid>
+      <description>&lt;h2 id=&#34;reviewviz---assisting-developers-perform-empirical-study-on-energy-related-app-reviews&#34;&gt;ReviewViz - Assisting Developers Perform Empirical Study on Energy Related App Reviews&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/Result-Set-Visualization-d3js-R&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.06027&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A significant issue for app developers: Energy inefficiency&lt;/li&gt;
+&lt;li&gt;No mechanism to track progress in a shared community&lt;/li&gt;
+&lt;li&gt;No dedicated visualization platform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-approach---reviewviz&#34;&gt;Proposed Approach - ReviewViz&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Interactive web-browser based Visualization Tool&lt;/li&gt;
+&lt;li&gt;Helping developers to mine different features from user reviews&lt;/li&gt;
+&lt;li&gt;Mechanism to track progress in a shared community&lt;/li&gt;
+&lt;li&gt;Automatic Integration of updated result in dynamic-data structure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;tool-architecture&#34;&gt;Tool Architecture&lt;/h2&gt;
+&lt;p&gt;The architecture of the tool contains two main components. The components were structured based on two essential purposes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Present the extensive outcome of classification techniques of the energy-related reviews and&lt;/li&gt;
+&lt;li&gt;Demonstrate the outcome of topic modeling approaches to automatically discover underlying issues causing energy inefficiency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;observations&#34;&gt;Observations&lt;/h2&gt;
+&lt;p&gt;We have provided our visualization tool to four developers who participated in our study. The developers had the independence of not choosing the visualization tool for careful inspection of the resultant dataset, but all of them found the visualization tool to be highly conducive for the exploration of the result set.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;We have also invited 4 of the undergrad students (who had the basic knowledge of machine learning and were paid for the tool-evaluation) to find out the perspective of fresh/new users. All of them reported that visualization tool to be robust and engaging.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the student participants pointed out the lack of options presented in the topic modeling part, which we found to be true. Nevertheless, at the same time, the comprehensiveness, smooth interactability, aesthetic features, and user-friendliness of the tool was also highly commended.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Before implementation, we have researched different ways to find a convenient and concise way of presenting the generated data so that developers could compare and utilize the extracted information with maximum efficiency. We have successfully delivered an interactive visualization tool that would be constructive and supportive for the developers who frequently analyze and inspect user feedbacks to identify energy efficiency issues.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/GclzhsALRP8&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ReviewViz - Assisting Developers Perform Empirical Study on Energy Consumption Related Reviews for Mobile Applications</title>
+      <link>/publication/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/review-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Geo Spaial Data Visualization</title>
+      <link>/slides/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/slides/geo-spatial-election-viz/</guid>
+      <description>&lt;h1 id=&#34;geo-spaial-data-visualization&#34;&gt;Geo Spaial Data Visualization&lt;/h1&gt;
+&lt;h3 id=&#34;and-critical-metrics-predictions-for-canadian-elections&#34;&gt;and Critical Metrics Predictions for Canadian Elections&lt;/h3&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/Mohammad-Abdul-Hadi/scraper-for-canadianelectionsdatabase.ca&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Code&lt;/a&gt; | 
+&lt;a href=&#34;https://arxiv.org/pdf/2009.05936.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Paper&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;problem-statement&#34;&gt;Problem Statement&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Abundance of open-source election databases&lt;/li&gt;
+&lt;li&gt;Lack of concise and insightful data interpretation tools&lt;/li&gt;
+&lt;li&gt;User Inability to process information in a consistently comparable way&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;proposed-solution&#34;&gt;Proposed Solution&lt;/h2&gt;
+&lt;p&gt;We proposed a data interpretation tool with following components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Visualization&lt;/li&gt;
+&lt;li&gt;Trend Analysis&lt;/li&gt;
+&lt;li&gt;Prediction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;
+&lt;p&gt;For this case study, we required to extract validated dataset of Canadian elections from different resources. The database developed by Dr. Anthony Sayers at the Department of Political Science at the University of Calgary is one of the most reliable, consistent, and accessible databases for Canadian elections.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;No direct access to the election-dataset.&lt;/li&gt;
+&lt;li&gt;No uniform method to retrieve the data from server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;component-scraper&#34;&gt;Component: Scraper&lt;/h2&gt;
+&lt;p&gt;For our data extraction task, we separate the Canadian Election Database webpages into two categories.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Static pages and&lt;/li&gt;
+&lt;li&gt;Dynamic pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;The federal election part of the website loads static pages upon clicking on any of the link to a federal election.&lt;/li&gt;
+&lt;li&gt;The Provincial election part of the website makes the browser send an AJAX request to the server and dynamically update the webpage with the information received.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;For the first phase of the data extraction, we store all the election data into different csv file in our server. We have used Beautiful Soup to extract information from the static pages and store them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;In the second phase of data extraction, we retrieve the information from the dynamically loaded webpages for provincial elections. Our second scraper function sends an AJAX request with appropriate parameters to the websites’ server on behalf of the browser. Upon receiving the AJAX request, the server sends all the associated response in a JSON file format to our function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;component-geo-spatial-visualization&#34;&gt;Component: Geo-Spatial Visualization&lt;/h2&gt;
+&lt;p&gt;In the second component of the tool, we have generated Geo-spatial map using R script. We needed get the actual map data with longitude and latitude information. In the case of Canada, central statistics agency provided map shape files that we could use. The Shape File format (.shp) is the most widely-used standard for maps.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Open data is meant to be used by the public and provide data-driven decisions. However, visualization tools are required to make the data interpretable.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the other challenges to provide the analysis and visualization tools for open data is the different formats of the data that are published by various parties in separate databases.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In this paper, we provided architecture and the technical details of an open-source tool that we developed for collecting data, and visualizing and analyzing information.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Although the tool is developed explicitly for Canadian Election data, the technical details and the approach can be used by researchers from various fields and developers to address the issue of open data, such as having separate databases with no interpretation tool&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://twitter.com/mohammad_a_hadi&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://youtu.be/3OyHh4OqWRI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Presentation&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geo-Spatial Data Visualization and Critical Metrics Predictions for Canadian Elections</title>
+      <link>/publication/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/geo-spatial-election-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Display Jupyter Notebooks with Academic</title>
+      <link>/post/jupyter/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/post/jupyter/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
+Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Welcome to Academic!
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+&lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
+&lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir -p &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+cd &amp;lt;MY-WEBSITE-FOLDER&amp;gt;/content/post/&amp;lt;SHORT-POST-TITLE&amp;gt;/
+jupyter lab index.ipynb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;jupyter&lt;/code&gt; command above will launch the JupyterLab editor, allowing us to add Academic metadata and write the content.&lt;/p&gt;
+&lt;h2 id=&#34;edit-your-post-metadata&#34;&gt;Edit your post metadata&lt;/h2&gt;
+&lt;p&gt;The first cell of your Jupter notebook will contain your post metadata (
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/front-matter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;front matter&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In Jupter, choose &lt;em&gt;Markdown&lt;/em&gt; as the type of the first cell and wrap your Academic metadata in three dashes, indicating that it is YAML front matter:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: My post&#39;s title
+date: 2019-09-01
+
+# Put any other Academic metadata here...
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Edit the metadata of your post, using the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; as a guide to the available options.&lt;/p&gt;
+&lt;p&gt;To set a 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#featured-image&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;featured image&lt;/a&gt;, place an image named &lt;code&gt;featured&lt;/code&gt; into your post&amp;rsquo;s folder.&lt;/p&gt;
+&lt;p&gt;For other tips, such as using math, see the guide on 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;writing content with Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;convert-notebook-to-markdown&#34;&gt;Convert notebook to Markdown&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jupyter nbconvert index.ipynb --to markdown --NbConvertApp.output_files_dir=.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+&lt;p&gt;This post was created with Jupyter. The orginal files can be found at &lt;a href=&#34;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&#34;&gt;https://github.com/gcushen/hugo-academic/tree/master/exampleSite/content/post/jupyter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Academic: the website builder for Hugo</title>
+      <link>/post/getting-started/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/post/getting-started/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Create a free website with Academic using Markdown, Jupyter, or RStudio. Choose a beautiful color theme and build anything with the Page Builder - over 40 &lt;em&gt;widgets&lt;/em&gt;, &lt;em&gt;themes&lt;/em&gt;, and &lt;em&gt;language packs&lt;/em&gt; included!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Check out the latest &lt;strong&gt;demo&lt;/strong&gt;&lt;/a&gt; of what you&amp;rsquo;ll get in less than 10 minutes, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/#expo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;view the &lt;strong&gt;showcase&lt;/strong&gt;&lt;/a&gt; of personal, project, and business sites.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;👉 
+&lt;a href=&#34;#install&#34;&gt;&lt;strong&gt;Get Started&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;📚 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the &lt;strong&gt;documentation&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💬 
+&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Ask a question&lt;/strong&gt; on the forum&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👥 
+&lt;a href=&#34;https://spectrum.chat/academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Chat with the &lt;strong&gt;community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🐦 Twitter: 
+&lt;a href=&#34;https://twitter.com/source_themes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@source_themes&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/GeorgeCushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;@GeorgeCushen&lt;/a&gt; 
+&lt;a href=&#34;https://twitter.com/search?q=%23MadeWithAcademic&amp;amp;src=typd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;#MadeWithAcademic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💡 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;⬆️ &lt;strong&gt;Updating?&lt;/strong&gt; View the 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Update Guide&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;❤️ &lt;strong&gt;Support development&lt;/strong&gt; of Academic:
+&lt;ul&gt;
+&lt;li&gt;☕️ 
+&lt;a href=&#34;https://paypal.me/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Donate a coffee&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💵 
+&lt;a href=&#34;https://www.patreon.com/cushen&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Become a backer on &lt;strong&gt;Patreon&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🖼️ 
+&lt;a href=&#34;https://www.redbubble.com/people/neutreno/works/34387919-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Decorate your laptop or journal with an Academic &lt;strong&gt;sticker&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👕 
+&lt;a href=&#34;https://academic.threadless.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wear the &lt;strong&gt;T-shirt&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;👩‍💻 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/contribute/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Contribute&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-academic-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; data-caption=&#34;Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34;&gt;
+
+
+  &lt;img src=&#34;https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Academic is mobile first with a responsive design to ensure that your site looks stunning on every device.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Key features:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/page-builder/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;widgets&lt;/strong&gt;&lt;/a&gt; and 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/jupyter/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable 
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code highlighting and 
+&lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX math&lt;/a&gt; supported&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - 
+&lt;a href=&#34;https://analytics.google.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Analytics&lt;/a&gt;, 
+&lt;a href=&#34;https://disqus.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one page design&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 15+ language packs including English, 中文, and Português&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+&lt;p&gt;Academic comes with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Alternatively, visitors can  choose their preferred mode - click the sun/moon icon in the top right of the 
+&lt;a href=&#34;https://academic-demo.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Demo&lt;/a&gt; to see it in action! Day/night mode can also be disabled by the site admin in &lt;code&gt;params.toml&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/customization/#custom-theme&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;customizable&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-admin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Admin&lt;/a&gt;:&lt;/strong&gt; An admin tool to import publications from BibTeX or import assets for an offline site&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;
+&lt;a href=&#34;https://github.com/sourcethemes/academic-scripts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Scripts&lt;/a&gt;:&lt;/strong&gt; Scripts to help migrate content to new versions of Academic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;You can choose from one of the following four methods to install:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-web-browser&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;one-click install using your web browser (recommended)&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-git&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer using &lt;strong&gt;Git&lt;/strong&gt; with the Command Prompt/Terminal app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer by downloading the &lt;strong&gt;ZIP files&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/install/#install-with-rstudio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;install on your computer with &lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then 
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/get-started/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personalize and deploy your new site&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;updating&#34;&gt;Updating&lt;/h2&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://sourcethemes.com/academic/docs/update/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;View the Update Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feel free to &lt;em&gt;star&lt;/em&gt; the project on 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github&lt;/a&gt; to help keep track of 
+&lt;a href=&#34;https://sourcethemes.com/academic/updates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;updates&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2016-present 
+&lt;a href=&#34;https://georgecushen.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Released under the 
+&lt;a href=&#34;https://github.com/gcushen/hugo-academic/blob/master/LICENSE.md&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

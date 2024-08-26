@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Visualization | Mohammad Abdul Hadi</title>
+    <link>/tag/data-visualization/</link>
+      <atom:link href="/tag/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Visualization</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© Mohammad-Abdul-Hadi, 2021</copyright><lastBuildDate>Wed, 05 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu837153259aa3eaf233be5c21ab790472_13982_512x512_fill_lanczos_center_2.png</url>
+      <title>Data Visualization</title>
+      <link>/tag/data-visualization/</link>
+    </image>
+    
+    <item>
+      <title>Review-Viz</title>
+      <link>/project/review-viz/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>/project/review-viz/</guid>
+      <description>&lt;p&gt;In our recent work, we have developed a replication package for the mobile application developers to help them isolate/classify energyrelated feedbacks from app-reviews and further investigate these reviews for potential issues crucial to the energy efficiency of the application. This package lets the developer decide which model to use and which features to choose based on their convenience at any given time. Additionally, the package helps the developer to deploy topic modeling algorithms to identify new issues/causes related to energy efficiency. Using this package, we have performed an empirical study with the participation of 4 developers. They have exhaustively performed all the models, feature combinations, and different topic modeling algorithms and carefully examined the generated result set manually.&lt;/p&gt;
+&lt;h2 id=&#34;contribution&#34;&gt;Contribution&lt;/h2&gt;
+&lt;p&gt;The resultant computational analysis (much like the output of our replication package) can be effectively combined with human reasoning with the help of powerful visualization that could lead to increased efficiency and more valuable results. So, we developed an interactive visualization tool to help the developers assimilate the result of the discussed empirical study of over 90 models, features combinations. Additionally, The tool also helps to visualize the output of the topic modeling algorithms to identify recent potential issues most likely to cause energy inefficiency in the app. For flexibility, it gives the developers options to choose the representation of a certain outcome.&lt;/p&gt;
+&lt;h2 id=&#34;tool-architecture&#34;&gt;Tool Architecture&lt;/h2&gt;
+&lt;p&gt;The architecture of the tool contains two main components. The components were structured based on two essential purposes: (a) Present the extensive outcome of classification techniques of the energy-related reviews and (b) Demonstrate the outcome of topic modeling approaches to automatically discover underlying issues causing energy inefficiency. Each component is necessary to accomplish insightful data interpretation for helping developers to process all the information in a consistently comparable way.&lt;/p&gt;
+&lt;h2 id=&#34;result&#34;&gt;Result&lt;/h2&gt;
+&lt;p&gt;We have provided our visualization tool to four developers who participated in our study. The developers had the independence of not choosing the visualization tool for careful inspection of the resultant dataset, but all of them found the visualization tool to be highly conducive for the exploration of the result set. We have also invited 4 of the undergrad students (who had the basic knowledge of machine learning and were paid for the tool-evaluation) to find out the perspective of fresh/new users. All of them reported that visualization tool to be robust and engaging. One of the student participants pointed out the lack of options presented in the topic modeling part, which we found to be true. Nevertheless, at the same time, the comprehensiveness, smooth interactability, aesthetic features, and user-friendliness of the tool was also highly commended. Before implementation, we have researched different ways to find a convenient and concise way of presenting the generated data so that developers could compare and utilize the extracted information with maximum efficiency. We have successfully delivered an interactive visualization tool that would be constructive and supportive for the developers who frequently analyze and inspect user feedbacks to identify energy efficiency issues.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Geo Spaial Data Visualization</title>
+      <link>/project/geo-spatial-election-viz/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/project/geo-spatial-election-viz/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Open data published by various organizations is intended to make the data available to the public. All over the world, numerous organizations maintain a considerable number of open databases containing a lot of facts and numbers. However, most of them do not offer a concise and insightful data interpretation or visualization tool, which can help users to process all of the information in a consistently comparable way. Canadian Federal and Provincial Elections is an example of these databases. This information exists in numerous websites, as separate tables so that the user needs to traverse through a tree structure of scattered information on the site, and the user is left with the comparison, without providing proper tools, datainterpretation or visualizations.&lt;/p&gt;
+&lt;p&gt;In this paper, we provide technical details of addressing this problem, by using the Canadian Elections data (since 1867) as a specific case study as it has numerous technical challenges. We hope that the methodology used here can help in developing similar tools to achieve some of the goals of publicly available datasets. The developed tool contains data visualization, trend analysis, and prediction components. The visualization enables the users to interact with the data through various techniques, including Geospatial visualization. To reproduce the results, we have open-sourced the tool.&lt;/p&gt;
+&lt;h2 id=&#34;scraper&#34;&gt;Scraper&lt;/h2&gt;
+&lt;p&gt;For this case study, we required to extract validated dataset of Canadian elections from different resources. The database developed by Dr. Anthony Sayers at the Department of Political Science at the University of Calgary is one of the most reliable, consistent, and accessible databases for Canadian elections. This is a web embedded database and can be accessed at: canadianelectionsdatabase.ca/
+This database contains information on Canadian federal, provincial, and territorial elections since 1867 and is arranged by-election, party, candidate, and district.&lt;/p&gt;
+&lt;p&gt;For our data extraction task, we separate the Canadian Election Database webpages into two categories. Static pages and Dynamic pages. The federal election part of the website loads static pages upon clicking on any of the link to a federal election. The loaded static page includes all the necessary information about the associated federal election.&lt;/p&gt;
+&lt;p&gt;The Provincial election part of the website does not load static pages upon clicking on any of the link to a provincial election. Instead, browser send an AJAX request to the server and dynamically update the webpage with the information received from the server in the form of AJAX response.&lt;/p&gt;
+&lt;p&gt;A challenge of working with this data is the lack of having a download option to retrieve and use this information (e.g., import to analysis tools). Therefore, we developed a scraper to scrape, extract necessary data, and store them in an appropriate format, to reduce further data cleaning and polishing effort. The extracted data is intended to be fed to the other two components of the tool. We have used 2 different scraper Python function to accommodate the extraction of election data by thoroughly crawling both static and dynamic pages.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For the first phase of the data extraction, we store all the election data into different csv file in our server. We have used Beautiful Soup to extract information from the static pages and store them.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the second phase of data extraction, we retrieve the information from the dynamically loaded webpages for provincial elections. Our second scraper function sends an AJAX request with appropriate parameters to the websites’ server on behalf of the browser. Upon receiving the AJAX request, the server sends all the associated response in a JSON file format to our function. The scraper function unpacks the JSON file to retrieve and store all the information in our local-server like the right-hand image.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;geo-spatial-data-visualization&#34;&gt;Geo-Spatial Data Visualization&lt;/h2&gt;
+&lt;p&gt;In the second component of the tool, we have generated Geo-spatial map using R script. We needed get the actual map data with longitude and latitude information. In the case of Canada, central statistics agency provided map shape files that we could use. The Shape File format (.shp) is the most widely-used standard for maps. We grabbed the files to convert them to a format the tidyverse library can use.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Open data is meant to be used by the public and provide data-driven decisions. However, visualization tools are required to make the data interpretable. One of the other challenges to provide the analysis and visualization tools for open data is the different formats of the data that are published by various parties in separate databases. In this paper, we provided architecture and the technical details of an open-source tool that we developed for collecting data, and visualizing and analyzing information. Although the tool is developed explicitly for Canadian Election data, the technical details and the approach can be used by researchers from various fields and developers to address the issue of open data, such as having separate databases with no interpretation tool&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
